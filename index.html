@@ -14,23 +14,40 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+ 
   <!-- Custom styles for this template -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/grayscale.min.css" rel="stylesheet">
 
   <style>
+
+  @font-face {
+      font-family: "ItsadzokeS01";
+      src: url(fonts/itsadzokeS01-046.otf) format("opentype");
+  }
+
+  @font-face {
+      font-family: "Itsadzoke";
+      src: url(fonts/itsadzoke-046.otf) format("opentype");
+  }
+
+  @font-face {
+      font-family: "Chela One";
+      src: url(fonts/ChelaOne-Regular.ttf) format("truetype");
+  }
+
   .masthead {
-    background: linear-gradient(to bottom,rgba(248,249,250,.1) 50%,rgba(248,249,250,0.5) 75%,rgba(248,249,250,1) 100%),url(img/bg-masthead.jpg);
+    margin-top: -80px;
+    padding: 200px 0 0 0;
+    background: linear-gradient(to bottom,rgba(248,249,250,0.1) 50%,rgba(248,249,250,0.5) 75%,rgba(248,249,250,1) 100%),url(img/bg-masthead.jpg);
+  /*background: linear-gradient(to bottom,rgba(248,249,250,.1) 50%,rgba(248,249,250,0.5) 75%,rgba(248,249,250,1) 100%),url(img/bg-masthead.jpg);*/
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-  }
-
-  .masthead h1 {
-    background-color: rgba(255,255,255,.9);
   }
 
   .masthead h2 {
@@ -38,7 +55,15 @@
   }
 
   .about-section {
-    background: linear-gradient(to bottom,#f8f9fa 0,rgba(248,249,250,.9) 75%,rgba(248,249,250,.8) 100%);
+    background: #f8f9fa;
+    padding-bottom: 5rem;
+  }
+
+  .projects-section {
+    background: linear-gradient(to top,rgba(248,249,250,.1) 0,rgba(248,249,250,.5) 75%,rgba(248,249,250,1) 100%),linear-gradient(to bottom,rgba(248,249,250,.1) 0,rgba(248,249,250,.5) 75%,rgba(248,249,250,1) 100%);;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
   }
 
   .signup-section {
@@ -50,6 +75,44 @@
 
   .img-fluid, .no-gutters {
     width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+  }
+
+  .icons a {
+    letter-spacing: normal;
+    background-color: navy !important;
+  }
+
+  .nav-link {
+    color: steelblue !important;
+  } 
+  
+  .navbar-brand {
+    color: steelblue !important;
+  }
+
+  .navbar-toggler {
+    color: steelblue !important;
+    border: 1px solid steelblue !important;
+  }
+  
+  .masthead h1 {
+    color: navy !important;
+    font-family: "ItsadzokeS01" !important;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .masthead h2 {
+    color: navy !important;
+  }
+
+  .featured-project {
+    margin-bottom: 10rem;
+  }
+
+  .fa-paper-plane, .fa-bars {
+    font-family: FontAwesome !important;
   }
   </style>
 
@@ -86,8 +149,17 @@
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Your friendly neighborhood lightworker!</h1>
-        <h2 class="text-white mx-auto mt-2 mb-5">Bringing light to dark corners - Empowering empaths to find their True North</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">What is True North?</a>
+        <h2 class="mx-auto mt-4 mb-5">Bringing light to dark corners - Empowering empaths to find their True North</h2>
+        <!-- TODO: Update to series of icon buttons. They will open new windows to the various sub sites (no scrolly) -->
+        <!--<a href="#about" class="btn btn-primary js-scroll-trigger">What is True North?</a>-->
+        <ul class="icons">
+            <li><a href="" class="fa-facebook" target="_blank">Facebook</a></li>
+            <li><a href="" class="fa-instagram" target="_blank">Instagram</a></li>
+            <li><a href="" class="fa-linkedin" target="_blank">LinkedIn</a></li>
+            <li><a href="" class="fa-bold" target="_blank">Blog</a></li>
+            <li><a href="" class="fa-bold" target="_blank">Blog</a></li>
+            <li><a href="" class="fa-bold" target="_blank">Blog</a></li>
+          </ul>
       </div>
     </div>
   </header>
@@ -106,58 +178,56 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
+  <section id="projects" class="projects-section">
     <div class="container">
 
       <!-- Featured Project Row -->
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        
+      <div class="row align-items-center no-gutters bg-light featured-project">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/flower.jpg" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
+          <div class="featured-text text-center text-lg-left justify-content-center ">
             <h4>Intuitive Healer and Muse</h4>
             <p class="text-black-50 mb-0">Business site link and info
           </div>
         </div>
+      </div>
 
-        <!-- Project One Row -->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0" style="margin-top: 10rem;">
-          <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-01.jpg" alt="" />
-          </div>
-          <div class="col-lg-6">
-            <div class="bg-white text-center h-100 project">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-black">Maelstrom</h4>
-                  <p class="mb-0 text-black-50">Use the Modern Blog Theme. This is how I muse for myself. Maelstrom</p>
-                  <hr class="d-none d-lg-block mb-0 ml-0">
-                </div>
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-01.jpg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-light text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black">Maelstrom</h4>
+                <p class="mb-0 text-black-50">Use the Modern Blog Theme. This is how I muse for myself. Maelstrom</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Project Two Row -->
-        <div class="row justify-content-center no-gutters">
-          <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
-          </div>
-          <div class="col-lg-6 order-lg-first">
-            <div class="bg-white text-center h-100 project">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-black">Personal Blog</h4>
-                  <p class="mb-0 text-black-50">Stuff about being Joyce and living with a bunch of crazies</p>
-                  <hr class="d-none d-lg-block mb-0 mr-0">
-                </div>
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-light text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-black">Personal Blog</h4>
+                <p class="mb-0 text-black-50">Stuff about being Joyce and living with a bunch of crazies</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
     </div>
@@ -183,7 +253,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-section bg-light" style="display: none;">
+  <!--<section class="contact-section bg-light" style="display: none;">
     <div class="container">
 
       <div class="row">
@@ -237,7 +307,7 @@
       </div>
 
     </div>
-  </section>
+  </section>-->
 
   <!-- Footer -->
   <footer class="bg-light small text-center text-black-50">
